@@ -2,13 +2,13 @@
 portfolio website using HTML, CSS, Js
 # 🌐 Personal Portfolio Website
 
-This is a responsive portfolio website project built using HTML, CSS, and JavaScript. It serves as a template to showcase skills, featured projects, and developer experience. The design is fully responsive, ensuring a smooth and consistent user experience across all device sizes.
+This is a responsive portfolio website project built using HTML, CSS, and JavaScript.The design is fully responsive, ensuring a smooth and consistent user experience across all device sizes.
 
 ---
 
 ## 🔗 Live Demo
 
-👉 [Visit Portfolio](https://designwithrehana.github.io/Responsive-portfolio/)
+👉 [Visit Portfolio]()
 
 ---
 
@@ -29,7 +29,7 @@ This is a responsive portfolio website project built using HTML, CSS, and JavaSc
 - Contact form
 - Smooth scroll and scroll animations
 - Burger menu for mobile navigation
-- Swiper.js carousel for "Best Sellers" or project highlights
+- project highlights
 
 ---
 
