@@ -893,23 +893,29 @@
             });
         });
 
-        // Form submission
-                            document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
 
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
 
-            // Here you would typically send the data to a server
-            // For this example, we'll just show an alert
-            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+                // Construct Gmail compose link
+                const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=abhijitreddy828@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\n\n${message}`
+                )}`;
 
-            // Reset form
-            this.reset();
-        });
+                // Open Gmail in new tab
+                window.open(mailtoLink, '_blank');
+                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+                // Optionally reset the form
+                this.reset();
+            });
+         
+
+
 
         // Add animation classes on scroll
         const observerOptions = {
@@ -929,61 +935,7 @@
             observer.observe(section);
         });
 
-    // Dark Mode Toggle
-    // const darkModeToggle = document.getElementById('darkModeToggle');
-    // const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
-    // const darkModeIcon = document.getElementById('darkModeIcon');
-    // const mobileDarkModeIcon = document.getElementById('mobileDarkModeIcon');
-    // const htmlElement = document.documentElement;
-
-    // // Check for saved dark mode preference
-    // const savedDarkMode = localStorage.getItem('darkMode');
-    // const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-    // // Set initial dark mode state
-    // let isDarkMode = false;
-
-    // if (savedDarkMode !== null) {
-    //     isDarkMode = savedDarkMode === 'true';
-    // } else {
-    //     isDarkMode = prefersDarkScheme.matches;
-    // }
-
-    // // Apply initial dark mode
-    // if (isDarkMode) {
-    //     enableDarkMode();
-    // } else {
-    //     disableDarkMode();
-    // }
-
-    // // Toggle dark mode
-    // darkModeToggle.addEventListener('click', toggleDarkMode);
-    // mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
-
-    // function toggleDarkMode() {
-    //     isDarkMode = !isDarkMode;
-
-    //     if (isDarkMode) {
-    //         enableDarkMode();
-    //     } else {
-    //         disableDarkMode();
-    //     }
-
-    //     // Save preference
-    //     localStorage.setItem('darkMode', isDarkMode);
-    // }
-
-    // function enableDarkMode() {
-    //     htmlElement.classList.add('dark');
-    //     darkModeIcon.classList.replace('fa-moon', 'fa-sun');
-    //     mobileDarkModeIcon.classList.replace('fa-moon', 'fa-sun');
-    // }
-
-    // function disableDarkMode() {
-    //     htmlElement.classList.remove('dark');
-    //     darkModeIcon.classList.replace('fa-sun', 'fa-moon');
-    //     mobileDarkModeIcon.classList.replace('fa-sun', 'fa-moon');
-    // }
+   
     </script>
 </body>
 
